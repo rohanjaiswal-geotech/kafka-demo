@@ -13,9 +13,15 @@ public class MyController {
     @Autowired
     private KafkaTemplate<String, String> template;
 
+    @Autowired
+    UserRepository userRepository;
+
     @RequestMapping("/test")
-    public String test(@RequestParam("message") String message ) {
-        template.send("topic1", message);
+    public String test(@RequestParam("username") String username ) {
+
+        String userName = userRepository.findByUserName(username).getUserName();
+        template.send("topic1", userName);
         return "Message Published";
     }
+
 }
