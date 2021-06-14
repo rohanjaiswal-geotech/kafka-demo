@@ -45,6 +45,7 @@ public class UserDetailsService {
 		System.out.println(in);
 		UserDetails userDetails = userDetailsRepository.findByUserName(in);
 		template.send("topic2", userDetails.toString());
+		template.flush();
 	}
 
 }

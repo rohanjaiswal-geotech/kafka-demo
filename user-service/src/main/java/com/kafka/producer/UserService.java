@@ -30,9 +30,9 @@ public class UserService {
 				.build();
 	}
 
-	@KafkaListener(id = "myId", topics = "topic2")
-	public void listen(String in) {
-		System.out.println(in);
-	}
+//	@KafkaListener(id = "myId", topics = "topic2")
+//	public void listen(String in) {
+//		System.out.println(in);
+//	}
 
 }

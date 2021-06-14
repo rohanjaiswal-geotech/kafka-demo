@@ -41,11 +41,11 @@ public class UserDetails {
 
     @Override
     public String toString() {
-        return "UserDetails{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+        return "{" +
+                "'id' : " + id +
+                ", userName : '" + userName + '\'' +
+                ", firstName : '" + firstName + '\'' +
+                ", lastName : '" + lastName + '\'' +
                 '}';
     }
 }
